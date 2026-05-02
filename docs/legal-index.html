@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruah — Rechtliches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:      #FAF3E8;
+      --card:    #F0E5D5;
+      --primary: #8B6F47;
+      --accent:  #C4975A;
+      --text:    #2C1F0F;
+      --subtle:  #9C8472;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 24px 80px;
+    }
+    .dove { font-size: 52px; margin-bottom: 16px; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--primary);
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: var(--subtle);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 64px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 780px;
+    }
+    a.card {
+      display: block;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1.5px solid rgba(139,111,71,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 20px rgba(139,111,71,0.08);
+    }
+    a.card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(139,111,71,0.16);
+    }
+    .card-icon { font-size: 32px; margin-bottom: 14px; }
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--subtle);
+      line-height: 1.6;
+    }
+    .lang-note {
+      margin-top: 48px;
+      font-size: 12px;
+      color: var(--subtle);
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    footer {
+      margin-top: 80px;
+      font-size: 12px;
+      color: var(--subtle);
+      text-align: center;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="dove">🕊️</div>
+  <h1>Ruah</h1>
+  <p class="tagline">רוּחַ &nbsp;·&nbsp; Atem &nbsp;·&nbsp; Wind &nbsp;·&nbsp; Geist</p>
+
+  <div class="grid">
+    <a class="card" href="privacy.html">
+      <div class="card-icon">🔒</div>
+      <h2>Datenschutzerklärung</h2>
+      <p>Wie wir deine Daten verarbeiten, speichern und schützen. DSGVO-konform. DE + EN.</p>
+    </a>
+    <a class="card" href="terms.html">
+      <div class="card-icon">📜</div>
+      <h2>Nutzungsbedingungen</h2>
+      <p>Regeln für die Nutzung der Ruah App — klar und verständlich. DE + EN.</p>
+    </a>
+    <a class="card" href="imprint.html">
+      <div class="card-icon">📋</div>
+      <h2>Impressum</h2>
+      <p>Angaben gemäß § 5 TMG. Verantwortlich für den Inhalt dieser App.</p>
+    </a>
+  </div>
+
+  <p class="lang-note">Alle Texte auf Deutsch und Englisch · All texts in German and English</p>
+
+  <footer>
+    © 2026 Ruah App &nbsp;·&nbsp; Alle Rechte vorbehalten<br>
+    Kontakt: <a href="mailto:hello@ruah-app.com" style="color:var(--accent)">hello@ruah-app.com</a>
+  </footer>
+</body>
+</html>
