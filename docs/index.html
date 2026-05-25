@@ -1,126 +1,465 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruah — Rechtliches</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg:      #FAF3E8;
-      --card:    #F0E5D5;
-      --primary: #8B6F47;
-      --accent:  #C4975A;
-      --text:    #2C1F0F;
-      --subtle:  #9C8472;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Lato', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 24px 80px;
-    }
-    .dove { font-size: 52px; margin-bottom: 16px; }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--primary);
-      letter-spacing: 4px;
-      margin-bottom: 8px;
-    }
-    .tagline {
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      font-size: 14px;
-      color: var(--subtle);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 64px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      width: 100%;
-      max-width: 780px;
-    }
-    a.card {
-      display: block;
-      background: var(--card);
-      border-radius: 20px;
-      padding: 32px 28px;
-      text-decoration: none;
-      color: var(--text);
-      border: 1.5px solid rgba(139,111,71,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 20px rgba(139,111,71,0.08);
-    }
-    a.card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 36px rgba(139,111,71,0.16);
-    }
-    .card-icon { font-size: 32px; margin-bottom: 14px; }
-    .card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-    .card p {
-      font-size: 13px;
-      color: var(--subtle);
-      line-height: 1.6;
-    }
-    .lang-note {
-      margin-top: 48px;
-      font-size: 12px;
-      color: var(--subtle);
-      letter-spacing: 1px;
-      text-align: center;
-    }
-    footer {
-      margin-top: 80px;
-      font-size: 12px;
-      color: var(--subtle);
-      text-align: center;
-      line-height: 1.8;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruah — רוּחַ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #FAF3E8;
+  --bg-dark:   #0D0905;
+  --card:      #F0E5D5;
+  --primary:   #3D2B1F;
+  --accent:    #C4975A;
+  --accent-lt: rgba(196,151,90,0.12);
+  --subtle:    #8B6F47;
+  --border:    rgba(196,151,90,0.18);
+  --text-dim:  rgba(61,43,31,0.55);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--primary);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  position:relative;
+  background:var(--bg-dark);
+  min-height:100vh;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:80px 24px 100px;
+  overflow:hidden;
+}
+
+.hero-glow {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(196,151,90,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(196,151,90,0.06) 0%, transparent 55%);
+}
+
+.hero-lines {
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(196,151,90,0.03) 59px, rgba(196,151,90,0.03) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(196,151,90,0.02) 59px, rgba(196,151,90,0.02) 60px);
+}
+
+.hero-content {
+  position:relative; z-index:2;
+  display:flex; flex-direction:column;
+  align-items:center; text-align:center;
+  max-width:700px;
+}
+
+.hero-chip {
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid rgba(196,151,90,0.3);
+  border-radius:100px;
+  padding:7px 18px;
+  font-size:11px; font-weight:500; letter-spacing:3px; text-transform:uppercase;
+  color:rgba(196,151,90,0.7);
+  margin-bottom:40px;
+}
+.chip-dot {
+  width:5px; height:5px; border-radius:50%;
+  background:rgba(196,151,90,0.7);
+}
+
+.hero-hebrew {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(72px,12vw,120px);
+  font-weight:300;
+  color:rgba(250,243,232,0.88);
+  line-height:1;
+  letter-spacing:8px;
+  margin-bottom:20px;
+  text-shadow:0 0 120px rgba(196,151,90,0.25);
+}
+
+.hero-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(14px,2vw,18px);
+  font-weight:400;
+  letter-spacing:8px; text-transform:uppercase;
+  color:rgba(196,151,90,0.65);
+  margin-bottom:40px;
+}
+
+.hero-meaning {
+  display:flex; gap:20px; align-items:center;
+  margin-bottom:48px;
+}
+.hero-meaning-word {
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px; font-style:italic; font-weight:300;
+  color:rgba(250,235,210,0.45);
+  letter-spacing:1px;
+}
+.hero-meaning-sep {
+  width:1px; height:16px;
+  background:rgba(196,151,90,0.3);
+}
+
+.hero-tagline {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(22px,3.5vw,32px);
+  font-weight:300; font-style:italic;
+  color:rgba(250,243,232,0.55);
+  line-height:1.6;
+  margin-bottom:56px;
+  max-width:500px;
+}
+
+/* Docs nav links */
+.docs-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;
+  width:100%;
+  max-width:680px;
+}
+
+.doc-card {
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:10px;
+  border:1px solid rgba(196,151,90,0.2);
+  border-radius:16px;
+  padding:28px 20px;
+  background:rgba(250,243,232,0.03);
+  text-decoration:none;
+  transition:background 0.2s, border-color 0.2s, transform 0.2s;
+  cursor:pointer;
+}
+.doc-card:hover {
+  background:rgba(196,151,90,0.06);
+  border-color:rgba(196,151,90,0.35);
+  transform:translateY(-2px);
+}
+.doc-icon { font-size:24px; }
+.doc-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px; font-weight:600;
+  color:rgba(250,243,232,0.85);
+  text-align:center;
+}
+.doc-subtitle {
+  font-size:11px; font-weight:400; letter-spacing:0.5px;
+  color:rgba(250,235,210,0.38);
+  text-align:center;
+  line-height:1.5;
+}
+
+/* Scroll indicator */
+.scroll-cue {
+  position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  color:rgba(196,151,90,0.35);
+  font-size:10px; letter-spacing:2px; text-transform:uppercase; font-weight:400;
+  animation:bob 2.5s ease-in-out infinite;
+}
+@keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(5px)} }
+.scroll-line {
+  width:1px; height:32px;
+  background:linear-gradient(180deg, rgba(196,151,90,0.4), transparent);
+}
+
+/* ── FEATURES SECTION ── */
+.section {
+  padding:100px 24px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.section-tag {
+  font-size:10px; font-weight:600; letter-spacing:3.5px; text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:16px;
+  display:flex; align-items:center; gap:12px;
+}
+.section-tag::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(90deg, var(--border), transparent);
+}
+
+.section-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(32px,5vw,48px);
+  font-weight:400;
+  color:var(--primary);
+  line-height:1.2;
+  margin-bottom:48px;
+}
+
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.feature-card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:28px 24px;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.feature-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 40px rgba(61,43,31,0.08);
+}
+
+.feat-icon-wrap {
+  width:48px; height:48px; border-radius:14px;
+  background:var(--accent-lt);
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+  margin-bottom:18px;
+}
+
+.feat-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px; font-weight:600;
+  color:var(--primary);
+  margin-bottom:8px;
+}
+
+.feat-desc {
+  font-size:14px; font-weight:300; line-height:1.7;
+  color:var(--subtle);
+}
+
+/* ── LEGAL SECTION ── */
+.legal-section {
+  background:var(--primary);
+  padding:80px 24px 100px;
+}
+
+.legal-inner {
+  max-width:900px;
+  margin:0 auto;
+}
+
+.legal-section .section-tag { color:rgba(196,151,90,0.7); }
+.legal-section .section-tag::after { background:linear-gradient(90deg, rgba(196,151,90,0.25), transparent); }
+.legal-section .section-title { color:rgba(250,243,232,0.9); margin-bottom:40px; }
+
+.legal-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+
+.legal-card {
+  display:flex; flex-direction:column; gap:10px;
+  border:1px solid rgba(196,151,90,0.18);
+  border-radius:16px;
+  padding:28px 22px;
+  background:rgba(250,243,232,0.03);
+  text-decoration:none;
+  transition:background 0.2s, border-color 0.2s;
+}
+.legal-card:hover {
+  background:rgba(196,151,90,0.06);
+  border-color:rgba(196,151,90,0.3);
+}
+
+.legal-icon { font-size:24px; }
+.legal-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px; font-weight:600;
+  color:rgba(250,243,232,0.88);
+}
+.legal-desc {
+  font-size:12px; font-weight:300;
+  color:rgba(250,235,210,0.4);
+  line-height:1.6;
+}
+.legal-arrow {
+  font-size:12px;
+  color:rgba(196,151,90,0.5);
+  margin-top:4px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background:var(--bg-dark);
+  padding:40px 24px;
+  text-align:center;
+  border-top:1px solid rgba(196,151,90,0.1);
+}
+
+.footer-hebrew {
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px; font-weight:300;
+  color:rgba(196,151,90,0.4);
+  letter-spacing:4px;
+  margin-bottom:12px;
+}
+.footer-line {
+  font-size:12px; font-weight:300;
+  color:rgba(250,235,210,0.25);
+  line-height:2;
+}
+.footer-line a {
+  color:rgba(196,151,90,0.5);
+  text-decoration:none;
+}
+.footer-line a:hover { color:rgba(196,151,90,0.8); }
+
+/* ── RESPONSIVENESS ── */
+@media(max-width:600px) {
+  .hero-meaning { flex-wrap:wrap; justify-content:center; }
+  .docs-grid { grid-template-columns:1fr 1fr; }
+}
+</style>
 </head>
 <body>
-  <div class="dove">🕊️</div>
-  <h1>Ruah</h1>
-  <p class="tagline">רוּחַ &nbsp;·&nbsp; Atem &nbsp;·&nbsp; Wind &nbsp;·&nbsp; Geist</p>
 
-  <div class="grid">
-    <a class="card" href="privacy.html">
-      <div class="card-icon">🔒</div>
-      <h2>Datenschutzerklärung</h2>
-      <p>Wie wir deine Daten verarbeiten, speichern und schützen. DSGVO-konform. DE + EN.</p>
-    </a>
-    <a class="card" href="terms.html">
-      <div class="card-icon">📜</div>
-      <h2>Nutzungsbedingungen</h2>
-      <p>Regeln für die Nutzung der Ruah App — klar und verständlich. DE + EN.</p>
-    </a>
-    <a class="card" href="imprint.html">
-      <div class="card-icon">📋</div>
-      <h2>Impressum</h2>
-      <p>Angaben gemäß § 5 TMG. Verantwortlich für den Inhalt dieser App.</p>
-    </a>
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-lines"></div>
+
+  <div class="hero-content">
+    <div class="hero-chip">
+      <div class="chip-dot"></div>
+      Christliche Begleit-App
+    </div>
+
+    <div class="hero-hebrew">רוּחַ</div>
+    <div class="hero-name">Ruah</div>
+
+    <div class="hero-meaning">
+      <span class="hero-meaning-word">Atem</span>
+      <div class="hero-meaning-sep"></div>
+      <span class="hero-meaning-word">Wind</span>
+      <div class="hero-meaning-sep"></div>
+      <span class="hero-meaning-word">Geist Gottes</span>
+    </div>
+
+    <p class="hero-tagline">
+      Ein stiller Ort für Gebet,<br>das Wort Gottes und Gemeinschaft.
+    </p>
+
+    <div class="docs-grid">
+      <a class="doc-card" href="privacy.html">
+        <div class="doc-icon">🔒</div>
+        <div class="doc-title">Datenschutz</div>
+        <div class="doc-subtitle">Privacy Policy<br>DSGVO · DE + EN</div>
+      </a>
+      <a class="doc-card" href="terms.html">
+        <div class="doc-icon">📜</div>
+        <div class="doc-title">Nutzungsbedingungen</div>
+        <div class="doc-subtitle">Terms of Service<br>DE + EN</div>
+      </a>
+      <a class="doc-card" href="imprint.html">
+        <div class="doc-icon">📋</div>
+        <div class="doc-title">Impressum</div>
+        <div class="doc-subtitle">Angaben gemäß §5 TMG</div>
+      </a>
+    </div>
   </div>
 
-  <p class="lang-note">Alle Texte auf Deutsch und Englisch · All texts in German and English</p>
+  <div class="scroll-cue">
+    <div class="scroll-line"></div>
+    Mehr
+  </div>
+</section>
 
-  <footer>
-    © 2026 Ruah App &nbsp;·&nbsp; Alle Rechte vorbehalten<br>
-    Kontakt: <a href="mailto:hello@ruah-app.com" style="color:var(--accent)">hello@ruah-app.com</a>
-  </footer>
+<!-- ── FEATURES ── -->
+<section class="section">
+  <div class="section-tag">Was Ruah bietet</div>
+  <h2 class="section-title">Spirituelle Begleitung<br>für jeden Tag</h2>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feat-icon-wrap">🕊️</div>
+      <div class="feat-name">Elihu</div>
+      <p class="feat-desc">Ein KI-gestützter spiritueller Begleiter — benannt nach dem weisen Zuhörer aus Hiob. Für Glaubensfragen, Gebet und Reflexion.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon-wrap">📖</div>
+      <div class="feat-name">Tagesvers</div>
+      <p class="feat-desc">Jeden Morgen ein Bibelvers mit persönlicher Andacht. Vollständige Bibel auf Deutsch (Schlachter 2000) und Englisch (KJV).</p>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon-wrap">🙏</div>
+      <div class="feat-name">Gebetsjournal</div>
+      <p class="feat-desc">Halte deine Gebete fest. Privat, sicher, nur für dich. Lies sie wieder und sieh wie Gott geantwortet hat.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon-wrap">👥</div>
+      <div class="feat-name">Community</div>
+      <p class="feat-desc">Öffentliche und private Chaträume für christliche Gemeinschaft. Bete mit anderen und wachse gemeinsam im Glauben.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon-wrap">🔥</div>
+      <div class="feat-name">Streak-System</div>
+      <p class="feat-desc">Tägliche Andacht als Habit aufbauen. Dein Streaks begleitet dich auf deiner spirituellen Reise.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon-wrap">✨</div>
+      <div class="feat-name">Premium</div>
+      <p class="feat-desc">Unbegrenzte Elihu-Gespräche, exklusive Themes, mehr Bibelmarkierungsfarben und mehr Community-Räume. Ab 4,99 €/Monat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEGAL ── -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="section-tag">Rechtliches</div>
+    <h2 class="section-title">Transparenz &amp;<br>Datenschutz</h2>
+
+    <div class="legal-grid">
+      <a class="legal-card" href="privacy.html">
+        <div class="legal-icon">🔒</div>
+        <div class="legal-title">Datenschutzerklärung</div>
+        <p class="legal-desc">Wie wir deine Daten verarbeiten, speichern und schützen. DSGVO-konform, EU AI Act, Deutsch &amp; Englisch.</p>
+        <div class="legal-arrow">Lesen →</div>
+      </a>
+      <a class="legal-card" href="terms.html">
+        <div class="legal-icon">📜</div>
+        <div class="legal-title">Nutzungsbedingungen</div>
+        <p class="legal-desc">Regeln für die Nutzung der Ruah App — klar und verständlich. Deutsch &amp; Englisch.</p>
+        <div class="legal-arrow">Lesen →</div>
+      </a>
+      <a class="legal-card" href="imprint.html">
+        <div class="legal-icon">📋</div>
+        <div class="legal-title">Impressum</div>
+        <p class="legal-desc">Angaben gemäß § 5 TMG. Verantwortlich für den Inhalt dieser App und Website.</p>
+        <div class="legal-arrow">Lesen →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-hebrew">רוּחַ</div>
+  <div class="footer-line">
+    © 2026 Ruah App ·
+    <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a>
+    · Entwickelt mit ❤ in Deutschland
+  </div>
+  <div class="footer-line" style="margin-top:4px">
+    <a href="privacy.html">Datenschutz</a> ·
+    <a href="terms.html">Nutzungsbedingungen</a> ·
+    <a href="imprint.html">Impressum</a>
+  </div>
+</footer>
+
 </body>
 </html>
