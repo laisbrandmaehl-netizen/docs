@@ -1,209 +1,197 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruah — Nutzungsbedingungen / Terms of Service</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg:      #FAF3E8;
-      --card:    #F0E5D5;
-      --primary: #8B6F47;
-      --accent:  #C4975A;
-      --text:    #2C1F0F;
-      --subtle:  #9C8472;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: 'Lato', sans-serif; font-weight: 400; line-height: 1.8; }
-    .lang-bar { background: var(--primary); color: #FAF3E8; text-align: center; padding: 12px; font-size: 13px; letter-spacing: 1px; }
-    .lang-bar a { color: var(--accent); text-decoration: none; margin: 0 12px; font-weight: 700; }
-    header { text-align: center; padding: 52px 24px 40px; border-bottom: 1.5px solid rgba(139,111,71,0.15); }
-    header .dove { font-size: 40px; margin-bottom: 12px; }
-    header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--primary); margin-bottom: 8px; }
-    header p { color: var(--subtle); font-size: 14px; }
-    .container { max-width: 780px; margin: 0 auto; padding: 0 24px 80px; }
-    .section-de { padding-top: 48px; }
-    .section-en { padding-top: 48px; margin-top: 48px; border-top: 2px dashed rgba(139,111,71,0.2); }
-    .lang-label { display: inline-block; background: var(--accent); color: #FAF3E8; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
-    h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); margin-top: 36px; margin-bottom: 12px; }
-    h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-top: 24px; margin-bottom: 8px; }
-    p { margin-bottom: 14px; font-size: 15px; }
-    ul { padding-left: 20px; margin-bottom: 14px; font-size: 15px; }
-    li { margin-bottom: 6px; }
-    .highlight-box { background: var(--card); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-size: 14px; }
-    .warning-box { background: #FFF8F0; border-left: 4px solid #C4975A; border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-size: 14px; }
-    a { color: var(--accent); }
-    .back-link { display: inline-block; margin-top: 48px; color: var(--subtle); font-size: 13px; text-decoration: none; letter-spacing: 1px; }
-    .updated { font-size: 12px; color: var(--subtle); margin-top: 8px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruah — Nutzungsbedingungen / Terms of Service</title>
+<style>
+  :root {
+    --bg: #FAF3E8; --card: #F0E5D5;
+    --primary: #3D2B1F; --accent: #C4975A; --subtle: #8B6F47;
+    --border: rgba(196,151,90,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; background: var(--bg); color: var(--primary); line-height: 1.8; padding: 0 20px 60px; max-width: 780px; margin: 0 auto; }
+  header { text-align: center; padding: 48px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  header .icon { font-size: 36px; margin-bottom: 12px; }
+  header h1 { font-size: 28px; font-weight: 700; }
+  header .subtitle { font-size: 13px; color: var(--subtle); margin-top: 6px; letter-spacing: 2px; text-transform: uppercase; }
+  .date { font-size: 13px; color: var(--subtle); font-family: -apple-system, sans-serif; margin-top: 8px; }
+  .lang-switch { display: flex; gap: 12px; justify-content: center; margin-bottom: 32px; }
+  .lang-switch a { color: var(--accent); text-decoration: none; font-size: 14px; font-family: -apple-system, sans-serif; padding: 6px 16px; border: 1px solid var(--border); border-radius: 20px; }
+  .lang-section { margin-bottom: 56px; }
+  .lang-flag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-family: -apple-system, sans-serif; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+  .lang-flag::before, .lang-flag::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  h2 { font-size: 20px; margin: 32px 0 12px; color: var(--primary); }
+  h3 { font-size: 16px; margin: 22px 0 8px; color: var(--subtle); font-weight: 700; font-family: -apple-system, sans-serif; }
+  p { margin-bottom: 12px; font-size: 15px; }
+  ul { padding-left: 24px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; font-size: 15px; }
+  .warning-box { background: #FFF8F0; border-left: 3px solid #E67E22; border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0; font-size: 14px; font-family: -apple-system, sans-serif; color: #8B5E30; }
+  .info-box { background: var(--card); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0; font-size: 14px; font-family: -apple-system, sans-serif; color: var(--subtle); }
+  a { color: var(--accent); }
+  .ai-badge { display: inline-block; background: rgba(196,151,90,0.15); border: 1px solid var(--border); border-radius: 12px; padding: 3px 12px; font-size: 11px; font-family: -apple-system, sans-serif; color: var(--accent); letter-spacing: 0.5px; margin-left: 8px; vertical-align: middle; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-family: -apple-system, sans-serif; font-size: 14px; color: var(--accent); text-decoration: none; margin-top: 40px; padding: 10px 20px; border: 1px solid var(--border); border-radius: 20px; }
+  footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; font-family: -apple-system, sans-serif; color: var(--subtle); }
+</style>
 </head>
 <body>
 
-<div class="lang-bar">
-  <a href="#de">🇩🇪 Deutsch</a> &nbsp;|&nbsp;
+<header>
+  <div class="icon">📜</div>
+  <h1>Ruah — Nutzungsbedingungen</h1>
+  <div class="subtitle">Terms of Service</div>
+  <div class="date">Zuletzt aktualisiert / Last updated: Mai 2026</div>
+</header>
+
+<div class="lang-switch">
+  <a href="#de">🇩🇪 Deutsch</a>
   <a href="#en">🇬🇧 English</a>
 </div>
 
-<header>
-  <div class="dove">📜</div>
-  <h1>Nutzungsbedingungen<br><span style="font-style:italic;font-weight:400;font-size:0.75em">Terms of Service</span></h1>
-  <p class="updated">Zuletzt aktualisiert / Last updated: Mai 2026</p>
-</header>
+<!-- ═══════════ DEUTSCH ═══════════ -->
+<div class="lang-section" id="de">
+<div class="lang-flag">🇩🇪 Deutsch</div>
 
-<div class="container">
+<p>Willkommen bei Ruah. Durch die Nutzung der App stimmst du diesen Nutzungsbedingungen zu.</p>
 
-  <!-- ═══════════════════════ DEUTSCH ═══════════════════════ -->
-  <div class="section-de" id="de">
-    <span class="lang-label">🇩🇪 Deutsch</span>
+<h2>1. Über Ruah</h2>
+<p>Ruah ist eine christliche Spiritual-App für Gebet, Bibelstudium, spirituelle Reflexion und Gemeinschaft. Der Name „Ruah" (רוּחַ) entstammt dem Hebräischen und bedeutet Atem, Wind und Geist Gottes.</p>
 
-    <p>Willkommen bei Ruah. Durch die Nutzung der App stimmst du diesen Nutzungsbedingungen zu. Bitte lies sie sorgfältig durch.</p>
+<h2>2. Nutzungsvoraussetzungen</h2>
+<ul>
+  <li>Du musst mindestens <strong>13 Jahre alt</strong> sein.</li>
+  <li>Nutzer unter 16 Jahren benötigen die Einwilligung ihrer Erziehungsberechtigten.</li>
+  <li>Du musst ein gültiges Konto anlegen und korrekte Informationen angeben.</li>
+  <li>Du bist verantwortlich für die Sicherheit deines Kontos und deines Passworts.</li>
+</ul>
 
-    <h2>1. Über Ruah</h2>
-    <p>Ruah ist eine christliche Spiritual-App, die Werkzeuge für Gebet, Bibelstudium, spirituelle Reflexion und Gemeinschaft bereitstellt. Der Name „Ruah" (רוּחַ) entstammt dem Hebräischen und bedeutet Atem, Wind und Geist Gottes.</p>
+<h2>3. Erlaubte Nutzung</h2>
+<p>Du darfst Ruah ausschließlich für persönliche, nicht-kommerzielle Zwecke nutzen. Verboten sind:</p>
+<ul>
+  <li>Beleidigungen, Hassrede oder Diskriminierung in Community-Räumen</li>
+  <li>Inhalte, die gegen geltendes Recht verstoßen</li>
+  <li>Technische Angriffe auf die App oder Infrastruktur</li>
+  <li>Fake-Accounts oder automatisierte Nutzung (Bots)</li>
+  <li>Kommerzielle Werbung ohne Genehmigung</li>
+</ul>
 
-    <h2>2. Nutzungsvoraussetzungen</h2>
-    <ul>
-      <li>Du musst mindestens <strong>13 Jahre alt</strong> sein, um Ruah zu nutzen.</li>
-      <li>Du musst ein gültiges Konto anlegen und korrekte Informationen angeben.</li>
-      <li>Du bist verantwortlich für die Sicherheit deines Kontos und deines Passworts.</li>
-    </ul>
-
-    <h2>3. Erlaubte Nutzung</h2>
-    <p>Du darfst Ruah ausschließlich für persönliche, nicht-kommerzielle Zwecke nutzen. Folgendes ist verboten:</p>
-    <ul>
-      <li>Beleidigungen, Hassrede oder Diskriminierung in Community-Räumen</li>
-      <li>Verbreitung von Inhalten, die gegen geltendes Recht verstoßen</li>
-      <li>Manipulation oder technische Angriffe auf die App oder Infrastruktur</li>
-      <li>Erstellung von Fake-Accounts oder automatisierte Nutzung (Bots)</li>
-      <li>Kommerzielle Werbung ohne Genehmigung</li>
-    </ul>
-
-    <h2>4. KI-Begleiter Elihu — wichtiger Hinweis</h2>
-
-    <div class="warning-box">
-      <strong>⚠️ Elihu ist kein Ersatz für professionelle Beratung.</strong><br>
-      Elihu ist ein KI-basierter spiritueller Gesprächspartner zur persönlichen Reflexion. Er ersetzt keine Seelsorge, keine psychologische Beratung und keine medizinische oder juristische Unterstützung. Bei ernsthaften persönlichen Krisen wende dich bitte an ausgebildete Fachkräfte.
-    </div>
-
-    <ul>
-      <li>Elihu wird von einer KI (Groq / Llama) betrieben und kann Fehler machen.</li>
-      <li>Die Antworten von Elihu stellen keine theologisch verbindliche Aussage dar.</li>
-      <li>Wir haften nicht für Entscheidungen, die auf Basis von Elihu-Antworten getroffen werden.</li>
-    </ul>
-
-    <h2>5. Deine Inhalte</h2>
-    <p>Gebete und private Notizen, die du in der App speicherst, gehören dir. Du räumst uns eine eingeschränkte Lizenz ein, diese Inhalte zum Zweck der Bereitstellung der App-Funktionen zu speichern und zu verarbeiten.</p>
-    <p>Community-Beiträge sind für andere Nutzer sichtbar. Du bist für deren Inhalt verantwortlich und sicherst zu, dass du keine Rechte Dritter verletzt.</p>
-
-    <h2>6. Premium-Abonnement</h2>
-    <ul>
-      <li>Premium kostet <strong>4,99 € pro Monat</strong> und wird automatisch verlängert.</li>
-      <li>Du kannst jederzeit in Google Play / App Store kündigen.</li>
-      <li>Bereits abgerechnete Zeiträume werden nicht erstattet, außer gesetzlich vorgeschrieben.</li>
-      <li>Preise können sich ändern — du wirst vorher informiert.</li>
-    </ul>
-
-    <h2>7. Verfügbarkeit und Änderungen</h2>
-    <p>Wir behalten uns vor, die App jederzeit zu ändern, zu erweitern oder einzustellen. Bei wesentlichen Änderungen informieren wir dich innerhalb der App. Wir garantieren keine ununterbrochene Verfügbarkeit.</p>
-
-    <h2>8. Haftungsausschluss</h2>
-    <p>Ruah wird im Rahmen des gesetzlich Möglichen „wie besehen" (as-is) bereitgestellt. Wir übernehmen keine Haftung für:</p>
-    <ul>
-      <li>Datenverluste durch technische Fehler</li>
-      <li>Inhalte anderer Nutzer in Community-Räumen</li>
-      <li>Entscheidungen auf Basis von KI-generierten Inhalten</li>
-      <li>Unterbrechungen oder Ausfälle des Dienstes</li>
-    </ul>
-
-    <h2>9. Kündigung</h2>
-    <p>Du kannst deinen Account jederzeit in den Einstellungen löschen. Wir können Accounts sperren oder löschen, wenn die Nutzungsbedingungen verletzt werden.</p>
-
-    <h2>10. Anwendbares Recht</h2>
-    <p>Es gilt deutsches Recht. Gerichtsstand ist, soweit gesetzlich zulässig, der Wohnsitz der Anbieterin.</p>
-
-    <h2>11. Kontakt</h2>
-    <p>Bei Fragen zu diesen Nutzungsbedingungen: <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
-
-    <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
-  </div>
-
-  <!-- ═══════════════════════ ENGLISH ═══════════════════════ -->
-  <div class="section-en" id="en">
-    <span class="lang-label">🇬🇧 English</span>
-
-    <p>Welcome to Ruah. By using the app, you agree to these Terms of Service. Please read them carefully.</p>
-
-    <h2>1. About Ruah</h2>
-    <p>Ruah is a Christian spiritual app providing tools for prayer, Bible study, spiritual reflection, and community. The name "Ruah" (רוּחַ) comes from Hebrew and means breath, wind, and the Spirit of God.</p>
-
-    <h2>2. Eligibility</h2>
-    <ul>
-      <li>You must be at least <strong>13 years old</strong> to use Ruah.</li>
-      <li>You must create a valid account and provide accurate information.</li>
-      <li>You are responsible for the security of your account and password.</li>
-    </ul>
-
-    <h2>3. Permitted Use</h2>
-    <p>You may use Ruah solely for personal, non-commercial purposes. The following is prohibited:</p>
-    <ul>
-      <li>Insults, hate speech, or discrimination in community rooms</li>
-      <li>Distributing content that violates applicable law</li>
-      <li>Manipulating or technically attacking the app or its infrastructure</li>
-      <li>Creating fake accounts or automated use (bots)</li>
-      <li>Commercial advertising without permission</li>
-    </ul>
-
-    <h2>4. AI Companion Elihu — Important Notice</h2>
-
-    <div class="warning-box">
-      <strong>⚠️ Elihu is not a substitute for professional support.</strong><br>
-      Elihu is an AI-based spiritual conversation partner for personal reflection. It does not replace pastoral counseling, psychological therapy, or medical or legal advice. In serious personal crises, please contact trained professionals.
-    </div>
-
-    <ul>
-      <li>Elihu is powered by AI (Groq / Llama) and may make mistakes.</li>
-      <li>Elihu's responses do not constitute theologically binding statements.</li>
-      <li>We are not liable for decisions made based on Elihu's responses.</li>
-    </ul>
-
-    <h2>5. Your Content</h2>
-    <p>Prayers and private notes you save in the app belong to you. You grant us a limited license to store and process this content for the purpose of providing app features.</p>
-    <p>Community posts are visible to other users. You are responsible for their content and warrant that you do not infringe third-party rights.</p>
-
-    <h2>6. Premium Subscription</h2>
-    <ul>
-      <li>Premium costs <strong>€4.99 per month</strong> and renews automatically.</li>
-      <li>You may cancel at any time via Google Play / App Store.</li>
-      <li>Already charged periods are non-refundable except as required by law.</li>
-      <li>Prices may change — you will be notified in advance.</li>
-    </ul>
-
-    <h2>7. Availability and Changes</h2>
-    <p>We reserve the right to modify, expand, or discontinue the app at any time. For significant changes, we will notify you within the app. We do not guarantee uninterrupted availability.</p>
-
-    <h2>8. Disclaimer of Liability</h2>
-    <p>Ruah is provided "as is" to the extent permitted by law. We accept no liability for:</p>
-    <ul>
-      <li>Data loss due to technical failures</li>
-      <li>Content of other users in community rooms</li>
-      <li>Decisions based on AI-generated content</li>
-      <li>Interruptions or outages of the service</li>
-    </ul>
-
-    <h2>9. Termination</h2>
-    <p>You may delete your account at any time in settings. We may suspend or delete accounts if these terms are violated.</p>
-
-    <h2>10. Governing Law</h2>
-    <p>German law applies. Place of jurisdiction, to the extent permitted by law, is the provider's place of residence.</p>
-
-    <h2>11. Contact</h2>
-    <p>For questions about these Terms: <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
-
-    <a class="back-link" href="index.html">← Back to overview</a>
-  </div>
-
+<h2>4. KI-Begleiter Elihu <span class="ai-badge">EU AI Act</span></h2>
+<div class="warning-box">
+  <strong>⚠️ Wichtiger Hinweis:</strong> Elihu ist kein Ersatz für professionelle Beratung. Bei ernsthaften persönlichen Krisen wende dich bitte an ausgebildete Fachkräfte.
 </div>
+<ul>
+  <li>Elihu ist ein <strong>KI-System</strong> (Groq / Llama 3.3 70B) und kein Mensch.</li>
+  <li>Elihu kann Fehler machen und seine Antworten sind nicht theologisch verbindlich.</li>
+  <li>Elihu ersetzt keine Seelsorge, Therapie oder medizinische und juristische Unterstützung.</li>
+  <li>Wir haften nicht für Entscheidungen, die auf Basis von Elihu-Antworten getroffen werden.</li>
+  <li>Wir erfüllen die Transparenzpflichten gemäß EU AI Act Art. 50.</li>
+</ul>
+
+<h2>5. Deine Inhalte</h2>
+<p>Gebete und private Notizen, die du in der App speicherst, <strong>gehören dir</strong>. Wir erhalten eine eingeschränkte Lizenz, diese Inhalte ausschließlich zum Zweck der Bereitstellung der App-Funktionen zu speichern und zu verarbeiten.</p>
+<p>Community-Beiträge sind für andere Nutzer sichtbar. Du bist für deren Inhalt verantwortlich.</p>
+
+<h2>6. Premium-Abonnement</h2>
+<div class="info-box">
+  Premium kostet <strong>4,99 € pro Monat</strong> und verlängert sich automatisch. Kündigung jederzeit über Google Play oder App Store. Bereits abgerechnete Zeiträume werden nicht erstattet, außer gesetzlich vorgeschrieben.
+</div>
+
+<h2>7. Verfügbarkeit und Änderungen</h2>
+<p>Wir behalten uns vor, die App jederzeit zu ändern oder einzustellen. Bei wesentlichen Änderungen informieren wir dich innerhalb der App. Wir garantieren keine ununterbrochene Verfügbarkeit.</p>
+
+<h2>8. Haftungsausschluss</h2>
+<p>Ruah wird im Rahmen des gesetzlich Möglichen „wie besehen" (as-is) bereitgestellt. Wir haften nicht für:</p>
+<ul>
+  <li>Datenverluste durch technische Fehler</li>
+  <li>Inhalte anderer Nutzer in Community-Räumen</li>
+  <li>Entscheidungen auf Basis von KI-generierten Inhalten</li>
+  <li>Unterbrechungen des Dienstes</li>
+</ul>
+
+<h2>9. Kündigung</h2>
+<p>Du kannst deinen Account jederzeit unter <strong>Einstellungen → Account löschen</strong> löschen. Wir können Accounts sperren oder löschen, wenn diese Bedingungen verletzt werden.</p>
+
+<h2>10. Anwendbares Recht</h2>
+<p>Es gilt deutsches Recht. Gerichtsstand ist, soweit gesetzlich zulässig, der Wohnsitz der Anbieterin.</p>
+
+<h2>11. Kontakt</h2>
+<p>Bei Fragen: <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
+</div>
+
+<!-- ═══════════ ENGLISH ═══════════ -->
+<div class="lang-section" id="en">
+<div class="lang-flag">🇬🇧 English</div>
+
+<p>Welcome to Ruah. By using the app, you agree to these Terms of Service.</p>
+
+<h2>1. About Ruah</h2>
+<p>Ruah is a Christian spiritual app for prayer, Bible study, spiritual reflection, and community. The name "Ruah" (רוּחַ) comes from Hebrew and means breath, wind, and the Spirit of God.</p>
+
+<h2>2. Eligibility</h2>
+<ul>
+  <li>You must be at least <strong>13 years old</strong> to use Ruah.</li>
+  <li>Users under 16 require parental or guardian consent.</li>
+  <li>You must create a valid account and provide accurate information.</li>
+  <li>You are responsible for the security of your account and password.</li>
+</ul>
+
+<h2>3. Permitted Use</h2>
+<p>You may use Ruah solely for personal, non-commercial purposes. The following is prohibited:</p>
+<ul>
+  <li>Insults, hate speech, or discrimination in community rooms</li>
+  <li>Content that violates applicable law</li>
+  <li>Technical attacks on the app or its infrastructure</li>
+  <li>Fake accounts or automated use (bots)</li>
+  <li>Commercial advertising without permission</li>
+</ul>
+
+<h2>4. AI Companion Elihu <span class="ai-badge">EU AI Act</span></h2>
+<div class="warning-box">
+  <strong>⚠️ Important notice:</strong> Elihu is not a substitute for professional support. In serious personal crises, please contact trained professionals.
+</div>
+<ul>
+  <li>Elihu is an <strong>AI system</strong> (Groq / Llama 3.3 70B), not a human.</li>
+  <li>Elihu may make mistakes and its responses are not theologically binding.</li>
+  <li>Elihu does not replace pastoral counseling, therapy, or medical or legal advice.</li>
+  <li>We are not liable for decisions made based on Elihu's responses.</li>
+  <li>We comply with transparency obligations under EU AI Act Art. 50.</li>
+</ul>
+
+<h2>5. Your Content</h2>
+<p>Prayers and private notes you save in the app <strong>belong to you</strong>. You grant us a limited license to store and process this content solely for the purpose of providing app features.</p>
+<p>Community posts are visible to other users. You are responsible for their content.</p>
+
+<h2>6. Premium Subscription</h2>
+<div class="info-box">
+  Premium costs <strong>€4.99 per month</strong> and renews automatically. Cancel at any time via Google Play or App Store. Already charged periods are non-refundable except as required by law.
+</div>
+
+<h2>7. Availability and Changes</h2>
+<p>We reserve the right to modify or discontinue the app at any time. For significant changes, we will notify you within the app. We do not guarantee uninterrupted availability.</p>
+
+<h2>8. Disclaimer of Liability</h2>
+<p>Ruah is provided "as is" to the extent permitted by law. We accept no liability for:</p>
+<ul>
+  <li>Data loss due to technical failures</li>
+  <li>Content of other users in community rooms</li>
+  <li>Decisions based on AI-generated content</li>
+  <li>Interruptions or outages of the service</li>
+</ul>
+
+<h2>9. Termination</h2>
+<p>You may delete your account at any time under <strong>Settings → Delete Account</strong>. We may suspend or delete accounts if these terms are violated.</p>
+
+<h2>10. Governing Law</h2>
+<p>German law applies. Place of jurisdiction, to the extent permitted by law, is the provider's place of residence.</p>
+
+<h2>11. Contact</h2>
+<p>For questions: <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
+</div>
+
+<div style="text-align:center">
+  <a class="back-link" href="https://laisbrandmaehl-netizen.github.io/docs/">← Zurück zur Übersicht / Back to overview</a>
+</div>
+<footer>© 2026 Ruah App · <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></footer>
 </body>
 </html>
