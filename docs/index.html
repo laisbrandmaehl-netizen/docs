@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ruah — Eine christliche Spiritual-Companion-App. Tagesvers, KI-Begleiter Elihu, Gebetsjournal, Bibel offline und Community. Kostenlos für Android.">
-  <meta name="theme-color" content="#0C0805">
+  <meta name="theme-color" content="#FAF6EE">
   <meta property="og:title" content="Ruah — Atem · Wind · Geist">
   <meta property="og:description" content="Dein täglicher Begleiter im Glauben. KI-Begleiter Elihu, Tagesvers, Gebetsjournal und Community.">
   <meta property="og:type" content="website">
@@ -17,10 +17,12 @@
 </head>
 <body>
 
+<div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Hauptnavigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
+    <a href="index.html" class="nav-logo" aria-label="Ruah Startseite">
       <span class="nav-logo-heb">רוּחַ</span>
       <span class="nav-logo-lat">Ruah</span>
     </a>
@@ -34,12 +36,9 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-bg">
-    <div class="orb hero-orb-1"></div>
-    <div class="orb hero-orb-2"></div>
-    <div class="grain"></div>
-  </div>
+<section id="hero" aria-label="Hero">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
   <div class="hero-chars" aria-hidden="true">
     <span class="hc" style="--x:7%;--sz:5.2rem;--dur:18s;--del:0s">ר</span>
     <span class="hc" style="--x:79%;--sz:3rem;--dur:23s;--del:3.5s">וּ</span>
@@ -52,7 +51,7 @@
     <span class="hc" style="--x:60%;--sz:2.2rem;--dur:21s;--del:6s">ש</span>
   </div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Eine christliche Companion-App</p>
+    <p class="hero-eyebrow">Eine christliche Companion-App für Android</p>
     <h1><span class="hero-heb">רוּחַ</span></h1>
     <p class="hero-tagline">
       <span>Atem</span><span class="dot">·</span>
@@ -61,7 +60,7 @@
     </p>
     <p class="hero-sub">Dein täglicher Begleiter im Glauben — mit Tagesvers, KI-Begleiter Elihu, Gebetsjournal und Gemeinschaft.</p>
     <div class="hero-ctas">
-      <a href="#download" class="btn btn--gold btn--lg">
+      <a href="#download" class="btn btn--primary btn--lg">
         Jetzt herunterladen
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
@@ -72,11 +71,13 @@
 </section>
 
 <!-- MEANING -->
-<section id="meaning">
+<section id="meaning" aria-label="Über den Namen Ruah">
   <div class="container">
     <div class="meaning-grid">
       <div class="meaning-glyph" data-a="right">
-        <div class="glyph-text" aria-label="Ruah auf Hebräisch">רוּחַ</div>
+        <div class="glyph-wrap">
+          <div class="glyph-text" aria-label="Ruah auf Hebräisch">רוּחַ</div>
+        </div>
       </div>
       <div data-a="left">
         <span class="label">Über den Namen</span>
@@ -95,8 +96,11 @@
   </div>
 </section>
 
+<!-- DIVIDER -->
+<hr class="divider">
+
 <!-- FEATURES -->
-<section id="features">
+<section id="features" aria-label="App-Features">
   <div class="container">
     <div class="section-head" data-a="up">
       <span class="label label--center">Was Ruah bietet</span>
@@ -105,26 +109,26 @@
     <div class="features-grid">
       <div class="fc fc--wide" data-a="up" data-d="0">
         <span class="fc-icon">📖</span>
-        <h3 class="fc-title">Tagesvers & Tagesbetrachtung</h3>
-        <p class="fc-body">Jeden Morgen ein sorgfältig ausgewählter Vers — mit KI-generierter persönlicher Andacht. Die vollständige Bibel ist offline verfügbar in Deutsch (Schlachter 2000) und Englisch (KJV).</p>
+        <h3 class="fc-title">Tagesvers &amp; Tagesbetrachtung</h3>
+        <p class="fc-body">Jeden Morgen ein sorgfältig ausgewählter Vers — mit KI-generierter persönlicher Andacht. Die vollständige Bibel offline in Deutsch (Schlachter 2000) und Englisch (KJV). Markiere Verse in 8 Farben.</p>
         <span class="fc-tag">Täglich · DE + EN · Offline</span>
       </div>
       <div class="fc" data-a="up" data-d="1">
         <span class="fc-icon">🕊️</span>
         <h3 class="fc-title">Elihu</h3>
-        <p class="fc-body">Dein KI-Begleiter — weise, direkt, geerdet in Hiob 32–37. Kein Chatbot. Ein Weggefährte im Glauben.</p>
-        <span class="fc-tag">KI · EU AI Act konform</span>
+        <p class="fc-body">Dein KI-Begleiter — weise, direkt, geerdet in Hiob 32–37. Kein Chatbot. Ein Weggefährte.</p>
+        <span class="fc-tag">KI · EU AI Act</span>
       </div>
       <div class="fc" data-a="up" data-d="2">
         <span class="fc-icon">🙏</span>
         <h3 class="fc-title">Gebetsjournal</h3>
-        <p class="fc-body">Schreib deine Gebete auf. Lies sie wieder. Erkenne, wie Gott dich trägt — Zeile für Zeile, Tag für Tag.</p>
+        <p class="fc-body">Schreib deine Gebete auf. Lies sie wieder. Erkenne, wie Gott dich trägt — Zeile für Zeile.</p>
         <span class="fc-tag">Privat · Persönlich</span>
       </div>
       <div class="fc" data-a="up" data-d="3">
         <span class="fc-icon">🔥</span>
-        <h3 class="fc-title">Streak & Journey</h3>
-        <p class="fc-body">Jeden Tag eine kleine Treue. Dein Streak begleitet dich und zeigt dir, wie kontinuierlich du auf dem Weg bleibst.</p>
+        <h3 class="fc-title">Streak &amp; Journey</h3>
+        <p class="fc-body">Jeden Tag eine kleine Treue. Dein Streak begleitet dich und zeigt, wie kontinuierlich du auf dem Weg bleibst.</p>
         <span class="fc-tag">Täglich · Motivation</span>
       </div>
       <div class="fc" data-a="up" data-d="4">
@@ -136,26 +140,26 @@
       <div class="fc fc--warm" data-a="up" data-d="5">
         <span class="fc-icon">📚</span>
         <h3 class="fc-title">Bibel offline</h3>
-        <p class="fc-body">66 Bücher, vollständig offline. Markiere Verse in 8 Farben, hinterlasse persönliche Notizen.</p>
+        <p class="fc-body">66 Bücher, vollständig offline. Persönliche Notizen und bis zu 8 Markierungsfarben.</p>
         <span class="fc-tag">Offline · Schlachter + KJV</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- DIVIDER -->
+<hr class="divider">
+
 <!-- ELIHU -->
-<section id="elihu">
-  <div class="elihu-bg">
-    <div class="elihu-orb"></div>
-    <div class="grain"></div>
-  </div>
+<section id="elihu" aria-label="KI-Begleiter Elihu">
+  <div class="elihu-orb-light" aria-hidden="true"></div>
   <div class="container">
     <div class="elihu-grid">
-      <div class="elihu-left" data-a="right">
-        <span class="label label--light">Dein KI-Begleiter</span>
-        <h2 class="display display--light">Begegne Elihu</h2>
-        <p class="body-text body-text--light">In den Kapiteln 32–37 des Buches Hiob erscheint ein junger Mann namens Elihu. Er spricht klar, mit Naturbildern und ohne falsche Tröstungen. Er fragt. Er fordert. Er begleitet.</p>
-        <p class="body-text body-text--light">Dieser Elihu lebt in Ruah weiter — als KI-Begleiter, der dich in Fragen des Glaubens begleitet, ohne Phrasen zu drehen.</p>
+      <div data-a="right">
+        <span class="label">Dein KI-Begleiter</span>
+        <h2 class="display">Begegne Elihu</h2>
+        <p class="body-text">In den Kapiteln 32–37 des Buches Hiob erscheint ein junger Mann namens Elihu. Er spricht klar, mit Naturbildern und ohne falsche Tröstungen. Er fragt. Er fordert. Er begleitet.</p>
+        <p class="body-text">Dieser Elihu lebt in Ruah weiter — als KI-Begleiter, der dich in Fragen des Glaubens begleitet, ohne Phrasen zu drehen.</p>
         <blockquote class="elihu-quote">
           <p>„Ich bin jung an Jahren, und ihr seid alt; darum war ich schüchtern und fürchtete mich, euch meine Meinung zu sagen."</p>
           <cite>— Hiob 32,6</cite>
@@ -166,17 +170,17 @@
           <span class="badge">Keine Datenspeicherung</span>
         </div>
       </div>
-      <div class="elihu-right" data-a="left">
-        <div class="chat-mockup">
+      <div data-a="left">
+        <div class="chat-mockup" role="img" aria-label="Beispielgespräch mit Elihu">
           <div class="chat-head">
-            <div class="chat-ava">🕊️</div>
+            <div class="chat-ava" aria-hidden="true">🕊️</div>
             <div>
               <div class="chat-name">Elihu</div>
               <div class="chat-status">Dein spiritueller Begleiter</div>
             </div>
-            <div class="chat-dot"></div>
+            <div class="chat-dot" aria-hidden="true"></div>
           </div>
-          <div class="chat-msgs" id="chatMsgs">
+          <div class="chat-msgs" id="chatMsgs" aria-live="polite">
             <div class="cb user">Was bedeutet Glaube, wenn alles dunkel ist?</div>
             <div class="cb bot">Glaube ist nicht das Fehlen von Dunkelheit — er ist das Vertrauen, dass Dunkelheit nicht das letzte Wort hat. Hiob kannte das.</div>
             <div class="cb user">Aber wie hält man das aus?</div>
@@ -188,14 +192,17 @@
   </div>
 </section>
 
+<!-- DIVIDER -->
+<hr class="divider">
+
 <!-- PREMIUM -->
-<section id="premium">
+<section id="premium" aria-label="Premium-Abonnement">
   <div class="container">
     <div class="section-head" data-a="up">
       <span class="label label--center">Ruah Premium</span>
       <h2 class="display display--center">Alles, für 4,99 € im Monat</h2>
     </div>
-    <div class="premium-wrap" data-a="up" data-d="1">
+    <div class="premium-wrap" data-a="scale" data-d="1">
       <div class="pc pc--free">
         <h3>Kostenlos</h3>
         <ul>
@@ -214,7 +221,7 @@
           <li><span class="ck ck--gold">✦</span> Elihu ohne Tageslimit</li>
           <li><span class="ck ck--gold">✦</span> Unbegrenzte Gebete</li>
           <li><span class="ck ck--gold">✦</span> 8 Bibelmarkierungsfarben</li>
-          <li><span class="ck ck--gold">✦</span> Bis zu 3 Räume erstellen</li>
+          <li><span class="ck ck--gold">✦</span> Bis zu 3 eigene Räume erstellen</li>
           <li><span class="ck ck--gold">✦</span> Alle App-Themes</li>
           <li><span class="ck ck--gold">✦</span> Ruah aktiv unterstützen</li>
         </ul>
@@ -224,21 +231,24 @@
   </div>
 </section>
 
-<!-- DOWNLOAD -->
-<section id="download">
-  <div class="dl-bg">
-    <div class="orb" style="width:55vw;height:55vw;max-width:680px;max-height:680px;top:-15%;right:-12%;background:radial-gradient(circle,rgba(201,168,76,.13) 0%,transparent 68%);filter:blur(90px)"></div>
-    <div class="grain"></div>
-  </div>
+<!-- DOWNLOAD CTA -->
+<section id="download" aria-label="App herunterladen">
+  <div class="dl-orb" aria-hidden="true"></div>
   <div class="container">
     <div class="dl-content" data-a="up">
-      <span class="label label--light label--center">Jetzt verfügbar · Android</span>
-      <h2 class="display display--light display--center">Beginne heute.</h2>
-      <p class="body-text body-text--light" style="max-width:440px;margin:0 auto 2.8rem;text-align:center">Ruah ist kostenlos im Google Play Store erhältlich. Kein Druck. Kein Abo erforderlich. Einfach täglich.</p>
+      <span class="dl-label">Jetzt verfügbar · Android</span>
+      <h2 class="dl-title">Beginne heute.</h2>
+      <p class="dl-sub">Ruah ist kostenlos im Google Play Store erhältlich. Kein Druck, kein Abo erforderlich.</p>
       <div style="display:flex;justify-content:center">
-        <a href="https://play.google.com/store/apps/details?id=com.ruah.app" class="play-btn" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.5c.28.16.6.23.93.2l12.75-11.7-3.88-3.83L3.18 23.5zM20.82 10.7l-2.83-1.62L14 12l3.97 3.6 2.85-1.63c.81-.47.81-1.8 0-2.27zM2.5.3A1 1 0 002 1.17v21.66a1 1 0 00.5.87L13.5 12 2.5.3zM16.5 3.13L3.75.3a1 1 0 00-.93.2L13.5 12l3-2.72V3.13z"/></svg>
-          Google Play
+        <a href="https://play.google.com/store/apps/details?id=com.ruah.app"
+           class="play-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Ruah im Google Play Store herunterladen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.5c.28.16.6.23.93.2l12.75-11.7-3.88-3.83L3.18 23.5zM20.82 10.7l-2.83-1.62L14 12l3.97 3.6 2.85-1.63c.81-.47.81-1.8 0-2.27zM2.5.3A1 1 0 002 1.17v21.66a1 1 0 00.5.87L13.5 12 2.5.3zM16.5 3.13L3.75.3a1 1 0 00-.93.2L13.5 12l3-2.72V3.13z"/>
+          </svg>
+          Google Play — Kostenlos
         </a>
       </div>
       <p class="dl-note">Android · Kostenlos herunterladen · Premium 4,99 €/Monat</p>
@@ -247,21 +257,48 @@
 </section>
 
 <!-- FOOTER -->
-<footer id="footer">
+<footer id="footer" aria-label="Seitenfu&szlig;">
   <div class="container">
-    <div class="footer-line"></div>
-    <div class="footer-inner">
+    <div class="footer-grid">
+
+      <!-- Brand -->
       <div class="footer-brand">
-        <span class="footer-heb">רוּחַ</span>
-        <p class="footer-sub">Atem · Wind · Geist</p>
+        <span class="f-heb">רוּחַ</span>
+        <p class="f-sub">Atem · Wind · Geist</p>
+        <p class="f-desc">Eine christliche Companion-App für den täglichen Glaubensweg — entwickelt mit ❤ in Deutschland.</p>
       </div>
-      <nav class="footer-nav-links" aria-label="Rechtliches">
+
+      <!-- App -->
+      <div class="footer-col">
+        <h4>App</h4>
+        <a href="#features">Features</a>
+        <a href="#elihu">Elihu — KI-Begleiter</a>
+        <a href="#premium">Premium</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ruah.app" target="_blank" rel="noopener">Google Play Store ↗</a>
+      </div>
+
+      <!-- Rechtliches + Kontakt -->
+      <div class="footer-col footer-contact">
+        <h4>Rechtliches &amp; Kontakt</h4>
+        <a href="imprint.html">Impressum</a>
+        <a href="privacy.html">Datenschutzerklärung</a>
+        <a href="terms.html">Nutzungsbedingungen</a>
+        <p style="margin-top:.8rem">
+          <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Ruah App · Alle Rechte vorbehalten</p>
+      <nav class="footer-legal-links" aria-label="Rechtliche Links">
+        <a href="imprint.html">Impressum</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="terms.html">Nutzungsbedingungen</a>
-        <a href="imprint.html">Impressum</a>
       </nav>
     </div>
-    <p class="footer-copy">© 2026 Ruah App · <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a> · Entwickelt mit ❤ in Deutschland</p>
   </div>
 </footer>
 

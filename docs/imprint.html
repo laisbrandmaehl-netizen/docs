@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ruah App Impressum — Angaben gemäß § 5 TMG.">
+  <meta name="description" content="Ruah App Impressum — Angaben gemäß § 5 TMG und § 18 Abs. 2 MStV.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FAF6EE">
   <title>Impressum · Ruah</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +14,11 @@
 </head>
 <body>
 
-<nav id="nav">
+<div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+<nav id="nav" aria-label="Hauptnavigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
+    <a href="index.html" class="nav-logo" aria-label="Ruah Startseite">
       <span class="nav-logo-heb">רוּחַ</span>
       <span class="nav-logo-lat">Ruah</span>
     </a>
@@ -28,14 +31,11 @@
 </nav>
 
 <header class="legal-hero">
-  <div class="legal-hero-orb"></div>
-  <div class="grain"></div>
+  <div class="legal-hero-orb" aria-hidden="true"></div>
   <div class="container--narrow">
-    <div class="legal-hero-content">
-      <span class="legal-icon">📋</span>
-      <h1 class="legal-title">Impressum</h1>
-      <p class="legal-sub">Angaben gemäß § 5 TMG · § 18 Abs. 2 MStV</p>
-    </div>
+    <span class="legal-icon" aria-hidden="true">📋</span>
+    <h1 class="legal-title">Impressum</h1>
+    <p class="legal-sub">Angaben gemäß § 5 TMG · § 18 Abs. 2 MStV</p>
   </div>
 </header>
 
@@ -44,88 +44,118 @@
     <div class="legal-layout">
 
       <aside class="legal-toc" aria-label="Inhaltsverzeichnis">
-        <p>Abschnitte</p>
-        <a href="#imp-verantwortlich">Verantwortliche</a>
+        <span class="toc-label">Abschnitte</span>
+        <a href="#imp-angaben">Verantwortliche</a>
         <a href="#imp-kontakt">Kontakt</a>
         <a href="#imp-streit">Streitschlichtung</a>
-        <a href="#imp-haftung">Haftung für Inhalte</a>
+        <a href="#imp-haftung-inhalte">Haftung Inhalte</a>
+        <a href="#imp-haftung-links">Haftung Links</a>
         <a href="#imp-urheberrecht">Urheberrecht</a>
-        <a href="#imp-hinweis">Hinweis</a>
+        <a href="#imp-techstack">Tech-Stack</a>
       </aside>
 
       <article class="legal-content">
 
-        <h2 id="imp-verantwortlich">Angaben gemäß § 5 TMG</h2>
+        <h2 id="imp-angaben">Angaben gemäß § 5 TMG</h2>
 
         <div class="imprint-grid">
           <div class="info-row">
-            <p class="ir-label">Verantwortliche Person</p>
+            <span class="ir-label">Verantwortliche Person</span>
             <p class="ir-value"><strong>Lais Brandmähl</strong></p>
           </div>
           <div class="info-row">
-            <p class="ir-label">Inhaltlich Verantwortliche gem. § 18 Abs. 2 MStV</p>
-            <p class="ir-value"><strong>Lais Brandmähl</strong><br><span style="font-size:.85em;color:var(--cream-45)">(Anschrift wie unten)</span></p>
+            <span class="ir-label">App-Paketname</span>
+            <p class="ir-value">com.ruah.app</p>
           </div>
           <div class="info-row">
-            <p class="ir-label">Anschrift</p>
+            <span class="ir-label">Anschrift</span>
             <p class="ir-value">
               [Straße und Hausnummer]<br>
-              [PLZ] [Stadt]<br>
+              [PLZ Stadt]<br>
               Deutschland
             </p>
           </div>
           <div class="info-row">
-            <p class="ir-label">Land</p>
-            <p class="ir-value">Deutschland · Germany</p>
+            <span class="ir-label">Inhaltlich Verantwortliche<br>gem. § 18 Abs. 2 MStV</span>
+            <p class="ir-value">
+              Lais Brandmähl<br>
+              <span style="font-size:.85em;color:var(--ink-45)">(Anschrift wie oben)</span>
+            </p>
           </div>
         </div>
 
-        <div class="info-box" style="margin-top:1.4rem">
-          <p><strong>Hinweis:</strong> Trage hier deine vollständige Adresse ein. Falls du anonym bleiben möchtest, kannst du einen Treuhänder-Service nutzen (z.B. über einen Anwalt oder Impressum-Dienst). Alternativ ist auch eine Postfachadresse möglich.</p>
+        <div class="info-box" style="margin-top:1.6rem">
+          <p><strong>Hinweis:</strong> Trage hier deine vollständige Postanschrift ein. Falls du deine Privatadresse schützen möchtest, kannst du einen <strong>Impressum-Dienst</strong> (z. B. über einen Rechtsanwalt oder einen kommerziellen Anbieter wie e-recht24.de) nutzen, der eine Geschäftsadresse bereitstellt. Alternativ ist auch eine Postfachadresse bei der Deutschen Post möglich.</p>
         </div>
 
         <h2 id="imp-kontakt">Kontakt</h2>
+
         <div class="imprint-grid">
           <div class="info-row">
-            <p class="ir-label">E-Mail</p>
-            <p class="ir-value"><a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
+            <span class="ir-label">E-Mail</span>
+            <p class="ir-value">
+              <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a>
+            </p>
           </div>
           <div class="info-row">
-            <p class="ir-label">App</p>
-            <p class="ir-value">com.ruah.app<br><span style="font-size:.85em;color:var(--cream-45)">Google Play Store</span></p>
+            <span class="ir-label">Website</span>
+            <p class="ir-value">
+              <a href="https://laisbrandmaehl-netizen.github.io/docs/" target="_blank" rel="noopener">laisbrandmaehl-netizen.github.io/docs</a>
+            </p>
           </div>
         </div>
 
         <h2 id="imp-streit">Streitschlichtung</h2>
-        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
+        <p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+        <p>Unsere E-Mail-Adresse lautet: <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
         <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
-        <h2 id="imp-haftung">Haftung für Inhalte</h2>
+        <h2 id="imp-haftung-inhalte">Haftung für Inhalte</h2>
         <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
         <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
 
+        <h2 id="imp-haftung-links">Haftung für Links</h2>
+        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+        <p>Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
         <h2 id="imp-urheberrecht">Urheberrecht</h2>
         <p>Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der Autorin. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-        <p>Soweit die Inhalte auf dieser Seite nicht von der Betreiberin erstellt wurden, werden die Urheberrechte Dritter beachtet. Solltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis unter <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a>.</p>
+        <p>Soweit die Inhalte auf dieser Seite nicht von der Betreiberin erstellt wurden, werden die Urheberrechte Dritter beachtet und entsprechend kenntlich gemacht. Solltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen Hinweis an <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a>.</p>
 
-        <h2 id="imp-hinweis">Tech-Stack &amp; Transparenz</h2>
-        <p>Ruah verwendet folgende Drittanbieter-Dienste — alle ausführlich beschrieben in der <a href="privacy.html">Datenschutzerklärung</a>:</p>
+        <h2 id="imp-techstack">Tech-Stack &amp; Transparenz</h2>
+        <p>Ruah verwendet folgende Drittanbieter-Dienste. Alle Informationen zur Datenverarbeitung durch diese Dienste sind in der <a href="privacy.html">Datenschutzerklärung</a> dokumentiert.</p>
+
         <div class="tp-grid">
           <div class="tp-card">
             <h4>Supabase</h4>
-            <p>Datenbank &amp; Auth · EU Frankfurt</p>
+            <p>Datenbank &amp; Authentifizierung · EU-Server Frankfurt</p>
+            <a href="https://supabase.com" target="_blank" rel="noopener">supabase.com ↗</a>
           </div>
           <div class="tp-card">
-            <h4>Groq / Llama</h4>
-            <p>KI-Verarbeitung für Elihu</p>
+            <h4>Groq / Llama 3.3</h4>
+            <p>KI-Verarbeitung für den Elihu-Begleiter</p>
+            <a href="https://groq.com" target="_blank" rel="noopener">groq.com ↗</a>
           </div>
           <div class="tp-card">
             <h4>RevenueCat</h4>
-            <p>Premium-Abonnements</p>
+            <p>Verwaltung von Premium-Abonnements</p>
+            <a href="https://revenuecat.com" target="_blank" rel="noopener">revenuecat.com ↗</a>
           </div>
           <div class="tp-card">
             <h4>Google Play</h4>
-            <p>Distribution &amp; Zahlungen</p>
+            <p>App-Distribution &amp; Zahlungsabwicklung</p>
+            <a href="https://play.google.com" target="_blank" rel="noopener">play.google.com ↗</a>
+          </div>
+          <div class="tp-card">
+            <h4>Expo / React Native</h4>
+            <p>App-Framework · Open Source</p>
+            <a href="https://expo.dev" target="_blank" rel="noopener">expo.dev ↗</a>
+          </div>
+          <div class="tp-card">
+            <h4>GitHub Pages</h4>
+            <p>Hosting dieser Website · GitHub, Inc.</p>
+            <a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com ↗</a>
           </div>
         </div>
 
@@ -133,26 +163,43 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
           Zurück zur Startseite
         </a>
+
       </article>
     </div>
   </div>
 </div>
 
-<footer id="footer">
+<footer id="footer" aria-label="Seitenfu&szlig;">
   <div class="container">
-    <div class="footer-line"></div>
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <span class="footer-heb">רוּחַ</span>
-        <p class="footer-sub">Atem · Wind · Geist</p>
+        <span class="f-heb">רוּחַ</span>
+        <p class="f-sub">Atem · Wind · Geist</p>
+        <p class="f-desc">Eine christliche Companion-App für den täglichen Glaubensweg.</p>
       </div>
-      <nav class="footer-nav-links">
+      <div class="footer-col">
+        <h4>App</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#elihu">Elihu</a>
+        <a href="index.html#premium">Premium</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ruah.app" target="_blank" rel="noopener">Google Play ↗</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Rechtliches &amp; Kontakt</h4>
+        <a href="imprint.html">Impressum</a>
+        <a href="privacy.html">Datenschutzerklärung</a>
+        <a href="terms.html">Nutzungsbedingungen</a>
+        <p style="margin-top:.8rem"><a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Ruah App · Alle Rechte vorbehalten</p>
+      <nav class="footer-legal-links" aria-label="Rechtliche Links">
+        <a href="imprint.html">Impressum</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="terms.html">Nutzungsbedingungen</a>
-        <a href="imprint.html">Impressum</a>
       </nav>
     </div>
-    <p class="footer-copy">© 2026 Ruah App · <a href="mailto:hello@ruah-app.com">hello@ruah-app.com</a></p>
   </div>
 </footer>
 
