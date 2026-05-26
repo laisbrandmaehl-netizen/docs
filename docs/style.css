@@ -1171,23 +1171,109 @@ ul { list-style: none; }
 .back-link:hover svg { transform: translateX(-3px); }
 
 /* ══════════════════════════════════════════
-   SCROLL ANIMATIONS
+   SCROLL ANIMATIONS  — Premium System
+   Elemente fliegen beim Scrollen rein.
+   JS setzt .visible wenn im Viewport.
 ══════════════════════════════════════════ */
+
+/* Basis: alle animierbaren Elemente starten unsichtbar */
 [data-a] {
   opacity: 0;
-  transition: opacity 1s var(--ease), transform 1s var(--ease);
+  will-change: opacity, transform;
+  transition:
+    opacity  .85s var(--ease),
+    transform .85s var(--ease);
 }
-[data-a="up"]    { transform: translateY(50px); }
-[data-a="right"] { transform: translateX(-55px); }
-[data-a="left"]  { transform: translateX(55px); }
-[data-a="scale"] { transform: scale(.97); }
-[data-a].visible { opacity: 1; transform: none; }
-[data-d="1"] { transition-delay: .1s; }
-[data-d="2"] { transition-delay: .2s; }
-[data-d="3"] { transition-delay: .3s; }
-[data-d="4"] { transition-delay: .4s; }
-[data-d="5"] { transition-delay: .5s; }
-[data-d="6"] { transition-delay: .6s; }
+
+/* Richtungen — stärkere Distanz für dramatischen Effekt */
+[data-a="up"]      { transform: translateY(64px); }
+[data-a="down"]    { transform: translateY(-40px); }
+[data-a="right"]   { transform: translateX(-72px); }
+[data-a="left"]    { transform: translateX(72px); }
+[data-a="scale"]   { transform: scale(.94) translateY(24px); }
+[data-a="fade"]    { /* nur opacity, kein transform */ }
+
+/* Einflug-Zielzustand */
+[data-a].visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Stagger-Delays — feinere Stufen */
+[data-d="1"]  { transition-delay: .08s; }
+[data-d="2"]  { transition-delay: .16s; }
+[data-d="3"]  { transition-delay: .24s; }
+[data-d="4"]  { transition-delay: .34s; }
+[data-d="5"]  { transition-delay: .44s; }
+[data-d="6"]  { transition-delay: .55s; }
+
+/* Word-Split Animationen für Headlines */
+.word-split .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.word-split .word-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform .75s var(--ease), opacity .75s var(--ease);
+}
+.word-split.visible .word-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* staggered per word via inline style --wi */
+.word-split .word-inner { transition-delay: calc(var(--wi, 0) * 0.09s); }
+
+/* Line-reveal für Label-Texte */
+.line-reveal {
+  overflow: hidden;
+  display: block;
+}
+.line-reveal-inner {
+  display: block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform .6s var(--ease), opacity .6s var(--ease);
+}
+.line-reveal.visible .line-reveal-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Chat-Bubble Fly-in */
+.cb {
+  transition: opacity .4s ease, transform .5s var(--ease);
+}
+.cb.user  { transform: translateX(28px); }
+.cb.bot   { transform: translateX(-28px); }
+.cb.chat-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+}
+
+/* Feature-Card Stagger via JS-assigned --ci */
+.fc[style*="--ci"] {
+  transition-delay: calc(var(--ci, 0) * 0.1s);
+}
+
+/* Section-Trennlinie wächst rein */
+.divider-anim {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s var(--ease);
+}
+.divider-anim.visible {
+  transform: scaleX(1);
+}
+
+/* Counter-Zahl läuft hoch */
+.count-up {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
 
 /* ══════════════════════════════════════════
    RESPONSIVE
