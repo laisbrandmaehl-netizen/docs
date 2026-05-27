@@ -263,6 +263,35 @@ ul { list-style: none; }
   transform: translateY(-1px);
 }
 
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  border: 1px solid var(--ink-20);
+  border-radius: var(--br-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--ink-45);
+  font-family: 'Lora', serif;
+  font-size: .74rem;
+  letter-spacing: .1em;
+  padding: .36rem .7rem;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+  line-height: 1;
+}
+.lang-btn:hover { background: var(--ink-06); color: var(--ink); }
+.lang-btn.active {
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 500;
+}
+/* on scrolled nav — slightly adjusted */
+#nav.scrolled .lang-toggle { border-color: var(--ink-20); }
+
 /* ══════════════════════════════════════════
    HERO
 ══════════════════════════════════════════ */
@@ -1295,6 +1324,7 @@ ul { list-style: none; }
   .imprint-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
+  .lang-toggle { display: none; }
   .features-grid { grid-template-columns: 1fr; }
   .fc--wide { grid-column: span 1; }
   .nav-links a:not(.nav-cta) { display: none; }
