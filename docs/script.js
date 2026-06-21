@@ -84,6 +84,7 @@ const T = {
     'footer.imprint':'Legal Notice',
     'footer.privacy':'Privacy Policy',
     'footer.terms':  'Terms of Service',
+    'footer.deleteAccount': 'Delete Account',
     'footer.rights': 'All rights reserved',
   },
   de: {
@@ -158,6 +159,7 @@ const T = {
     'footer.imprint':'Impressum',
     'footer.privacy':'Datenschutzerklärung',
     'footer.terms':  'Nutzungsbedingungen',
+    'footer.deleteAccount': 'Konto löschen',
     'footer.rights': 'Alle Rechte vorbehalten',
   }
 };
