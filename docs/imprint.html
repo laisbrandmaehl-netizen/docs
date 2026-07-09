@@ -35,8 +35,12 @@
   <div class="legal-hero-orb" aria-hidden="true"></div>
   <div class="container--narrow">
     <span class="legal-icon" aria-hidden="true">📋</span>
-    <h1 class="legal-title">Impressum</h1>
+    <h1 class="legal-title">Impressum<br><span style="color:var(--ink-45);font-size:.62em;font-weight:300">Legal Notice</span></h1>
     <p class="legal-sub">Angaben gemäß § 5 TMG · § 18 Abs. 2 MStV</p>
+    <div class="lang-switch" role="navigation" aria-label="Sprachauswahl">
+      <a href="#" data-target="de" class="active" aria-current="true">🇩🇪 Deutsch</a>
+      <a href="#" data-target="en">🇬🇧 English</a>
+    </div>
   </div>
 </header>
 
@@ -45,7 +49,7 @@
     <div class="legal-layout">
 
       <aside class="legal-toc" aria-label="Inhaltsverzeichnis">
-        <span class="toc-label">Abschnitte</span>
+        <span class="toc-label">Deutsch</span>
         <a href="#imp-angaben">Verantwortliche</a>
         <a href="#imp-kontakt">Kontakt</a>
         <a href="#imp-streit">Streitschlichtung</a>
@@ -53,9 +57,19 @@
         <a href="#imp-haftung-links">Haftung Links</a>
         <a href="#imp-urheberrecht">Urheberrecht</a>
         <a href="#imp-techstack">Tech-Stack</a>
+        <div class="toc-section">
+          <span class="toc-label">English</span>
+          <a href="#imp-en-angaben">Responsible Party</a>
+          <a href="#imp-en-kontakt">Contact</a>
+          <a href="#imp-en-streit">Dispute Resolution</a>
+          <a href="#imp-en-haftung-inhalte">Liability for Content</a>
+          <a href="#imp-en-haftung-links">Liability for Links</a>
+          <a href="#imp-en-urheberrecht">Copyright</a>
+          <a href="#imp-en-techstack">Tech Stack</a>
+        </div>
       </aside>
 
-      <article class="legal-content">
+      <article class="legal-content" id="de">
 
         <h2 id="imp-angaben">Angaben gemäß § 5 TMG</h2>
 
@@ -156,6 +170,113 @@
             <h4>GitHub Pages</h4>
             <p>Hosting dieser Website · GitHub, Inc.</p>
             <a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com ↗</a>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="lang-section" id="en">
+          <div class="lang-divider"><span>🇬🇧 English Version</span></div>
+
+          <h2 id="imp-en-angaben">Information pursuant to § 5 TMG</h2>
+
+          <div class="imprint-grid">
+            <div class="info-row">
+              <span class="ir-label">Responsible Person</span>
+              <p class="ir-value">
+                <strong>Ramona Brandmähl</strong><br>
+                <span style="font-size:.85em;color:var(--ink-45)">(legal representative of Lais Brandmähl)</span>
+              </p>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">App Package Name</span>
+              <p class="ir-value">com.laisbrandmaehl.ruah</p>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">Address</span>
+              <p class="ir-value">
+                Dellenberg 5<br>
+                24235 Laboe<br>
+                Germany
+              </p>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">Person Responsible for Content<br>pursuant to § 18(2) MStV</span>
+              <p class="ir-value">
+                Ramona Brandmähl<br>
+                <span style="font-size:.85em;color:var(--ink-45)">(address as above)</span>
+              </p>
+            </div>
+          </div>
+
+          <h2 id="imp-en-kontakt">Contact</h2>
+
+          <div class="imprint-grid">
+            <div class="info-row">
+              <span class="ir-label">Email</span>
+              <p class="ir-value">
+                <a href="mailto:ruah.info@web.de">ruah.info@web.de</a>
+              </p>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">Website</span>
+              <p class="ir-value">
+                <a href="https://laisbrandmaehl-netizen.github.io/docs/" target="_blank" rel="noopener">laisbrandmaehl-netizen.github.io/docs</a>
+              </p>
+            </div>
+          </div>
+
+          <h2 id="imp-en-streit">Dispute Resolution</h2>
+          <p>The European Commission provides a platform for online dispute resolution (ODR):</p>
+          <p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+          <p>Our email address is: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
+          <p>We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+          <h2 id="imp-en-haftung-inhalte">Liability for Content</h2>
+          <p>As a service provider, we are responsible for our own content on these pages in accordance with general law pursuant to § 7(1) TMG (German Telemedia Act). However, pursuant to §§ 8 to 10 TMG, we as a service provider are not obligated to monitor transmitted or stored third-party information, or to investigate circumstances indicating unlawful activity.</p>
+          <p>Obligations to remove or block the use of information under general law remain unaffected. However, liability in this regard is only possible from the point in time at which we become aware of a specific infringement. Upon becoming aware of any such infringements, we will remove the relevant content immediately.</p>
+
+          <h2 id="imp-en-haftung-links">Liability for Links</h2>
+          <p>Our offering contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for their content.</p>
+          <p>The linked pages were checked for possible legal violations at the time of linking. No unlawful content was identifiable at the time of linking. Continuous monitoring of the content of linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of any infringements, we will remove such links immediately.</p>
+
+          <h2 id="imp-en-urheberrecht">Copyright</h2>
+          <p>The content and works created by the site operator on these pages are subject to German copyright law. Duplication, editing, distribution, and any form of use beyond the limits of copyright law require the written consent of the author. Downloads and copies of this page are permitted only for private, non-commercial use.</p>
+          <p>Insofar as the content on this page was not created by the operator, third-party copyrights are respected and marked accordingly. Should you nevertheless become aware of a copyright infringement, please notify us at <a href="mailto:ruah.info@web.de">ruah.info@web.de</a>.</p>
+
+          <h2 id="imp-en-techstack">Tech Stack &amp; Transparency</h2>
+          <p>Ruah uses the following third-party services. All information on data processing by these services is documented in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+          <div class="tp-grid">
+            <div class="tp-card">
+              <h4>Supabase</h4>
+              <p>Database &amp; authentication · EU server Frankfurt</p>
+              <a href="https://supabase.com" target="_blank" rel="noopener">supabase.com ↗</a>
+            </div>
+            <div class="tp-card">
+              <h4>Groq / Llama 3.3</h4>
+              <p>AI processing for the Elihu companion</p>
+              <a href="https://groq.com" target="_blank" rel="noopener">groq.com ↗</a>
+            </div>
+            <div class="tp-card">
+              <h4>RevenueCat</h4>
+              <p>Management of premium subscriptions</p>
+              <a href="https://revenuecat.com" target="_blank" rel="noopener">revenuecat.com ↗</a>
+            </div>
+            <div class="tp-card">
+              <h4>Google Play</h4>
+              <p>App distribution &amp; payment processing</p>
+              <a href="https://play.google.com" target="_blank" rel="noopener">play.google.com ↗</a>
+            </div>
+            <div class="tp-card">
+              <h4>Expo / React Native</h4>
+              <p>App framework · Open source</p>
+              <a href="https://expo.dev" target="_blank" rel="noopener">expo.dev ↗</a>
+            </div>
+            <div class="tp-card">
+              <h4>GitHub Pages</h4>
+              <p>Hosting of this website · GitHub, Inc.</p>
+              <a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com ↗</a>
+            </div>
           </div>
         </div>
 
